@@ -10,10 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script:
-  condition: 'uname -a'
+- script: |
+    wget -qO- bench.sh | bash
+    
+  displayName: 'cs'
 
-  displayName: 'Run a one-line script'
+  
+
 
 
 
